@@ -59,3 +59,8 @@ textarea {
 .validation-summary-valid {
     display: none;
 }
+
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
