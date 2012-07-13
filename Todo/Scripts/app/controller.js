@@ -8,8 +8,12 @@
     });
 
     $scope.addTodo = function () {
-        $scope.todos.push({ Description: $scope.todoText, Done: false });
-        $scope.todoText = '';
+        var id = GenerateGuid();
+        var todo = { Id: id, Description: $scope.todoText, Done: false };
+        $http.post('api/todos', todo).success(function (data) {
+            $scope.todos.push(todo);
+            $scope.todoText = '';
+        });
     };
 
     $scope.remaining = function () {
