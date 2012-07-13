@@ -9,8 +9,8 @@
         [ <a href="" ng-click="archive()">archive</a> ]
         <ul class="unstyled">
             <li ng-repeat="todo in todos">
-                <input type="checkbox" ng-model="todo.done">
-                <span class="done-{{todo.done}}">{{todo.text}}</span>
+                <input type="checkbox" ng-model="todo.Done">
+                <span class="done-{{todo.Done}}">{{todo.Description}}</span>
             </li>
         </ul>
         <form ng-submit="addTodo()">            
@@ -25,5 +25,5 @@
 
 @section scripts
 {
-    <script src="~/Scripts/todo.js"></script>
+    <script src="~/Scripts/app/controller.js"></script>
 }
